@@ -1,0 +1,14 @@
+<a href="#!/cakes/add" class="btn btn-primary btn-sm pull-right">Add a new cake!</a>
+<h1>All the cakes!</h1>
+<hr />
+
+<ul class="list-unstyled">
+  <li ng-repeat="cake in cakes" id="cake-{{cake.id}}" class="row">
+    <div class="col-xs-4 col-md-3">
+      <a href="#!/cakes/{{cake.id}}"><img class="img-thumbnail img-responsive" ng-src="{{cake.imageUrl}}"></a>
+    </div>
+    <div class="col-xs-8 col-md-9">
+      <h2><a href="#!/cakes/{{cake.id}}">{{cake.name}}</a></h2>
+    </div>
+  </li>
+</ul>

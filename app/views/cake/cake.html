@@ -1,0 +1,16 @@
+<h1>{{cake.name}}</h1>
+<a href="#!/cakes" class="btn btn-primary btn-sm">&larr; Back to the cakes</a>
+<hr />
+
+<div class="row">
+  <div class="col-xs-8 col-md-9">
+    <p>{{cake.comment}}</p>
+    <p>
+      <strong>Yum Factor:</strong>
+      <span data-rating="{{cake.yumFactor}}" data-max=5></span>
+    </p>
+  </div>
+  <div class="col-xs-4 col-md-3">
+    <img ng-src="{{cake.imageUrl}}" class="img-thumbnail img-responsive">
+  </div>
+</div>
