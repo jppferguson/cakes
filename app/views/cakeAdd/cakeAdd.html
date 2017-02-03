@@ -1,29 +1,29 @@
-<h2>Adding a new cake</h2>
+<h2>Add a new cake</h2>
 <a href="#!/cakes" class="btn btn-primary btn-sm">&larr; Back to the cakes</a>
 <hr />
 
-<form novalidate ng-submit="submit()">
+<form name="newCakeForm" novalidate ng-submit="submit()">
   <div class="form-group">
     <label for="name">Name</label>
-    <input type="text" class="form-control" id="name" ng-model="newCake.name">
+    <input type="text" class="form-control" id="name" ng-model="newCake.name" required>
   </div>
 
   <div class="form-group">
     <label for="comment">Comment</label>
-    <textarea class="form-control" id="comment" ng-model="newCake.comment"></textarea>
+    <textarea class="form-control" id="comment" rows="3" ng-model="newCake.comment" required ng-minlength="3"></textarea>
   </div>
 
   <div class="form-group">
     <label for="imageUrl">Image URL</label>
-    <input type="text" class="form-control" id="imageUrl" ng-model="newCake.imageUrl">
+    <input type="text" class="form-control" id="imageUrl" ng-model="newCake.imageUrl" required  ng-minlength="5">
   </div>
 
   <div class="form-group">
     <label for="comment">Yum Factor</label>
-    <select class="form-control" id="yumFactor" ng-model="newCake.yumFactor">
+    <select class="form-control" id="yumFactor" ng-model="newCake.yumFactor" required>
       <option ng-repeat="n in [].constructor(5) track by $index+1">{{$index+1}}</option>
     </select>
   </div>
 
-  <button type="submit" class="btn btn-default">Add new cake</button>
+  <button type="submit" class="btn btn-default" ng-disabled="newCakeForm.$invalid">Add new cake</button>
 </form>
