@@ -2,7 +2,7 @@
 A demo angular app.
 
 ## Preview:
-https://cakes-jf.herokuapp.com/
+http://cakes-jf.herokuapp.com/
 
 ## Setup
 To install required dependencies, run: `npm install`
